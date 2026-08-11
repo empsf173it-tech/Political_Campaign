@@ -424,7 +424,23 @@ b, strong {
 }
 
 /* 1. HOME HERO */
-.hero-wrapper, .hero-home-wrapper {
+.hero-wrapper, .hero-home-wrapper, .hero-home1-wrapper {
+  position: relative;
+  padding: 160px 0 100px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero-home-wrapper {
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('../images/hero-home-bg.png');
+}
+
+.hero-home1-wrapper {
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('../images/hero-home1-bg.png');
+}
+/* OLD CSS BELOW THIS */
+.hero-home-wrapper-old {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.86) 100%), url('../images/hero-campaign-rally.png') center top / cover no-repeat;
   text-align: center;
 }
