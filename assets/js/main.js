@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Gallery Interactive Filter Buttons Handler
   const filterBtns = document.querySelectorAll('[data-filter]');
-  const galleryItems = document.querySelectorAll('.gallery-item, .filter-item');
+  const galleryItems = document.querySelectorAll('.gallery-item, .filter-item, .masonry-item');
 
   if (filterBtns.length > 0 && galleryItems.length > 0) {
     filterBtns.forEach(btn => {
@@ -162,8 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Filter gallery cards with smooth show/hide transitions
         galleryItems.forEach(item => {
+          item.classList.remove('scale-rotate-enter');
+
           if (filterVal === 'all' || item.classList.contains(filterVal)) {
             item.style.display = 'block';
+            void item.offsetWidth; // Force reflow
+            item.classList.add('scale-rotate-enter');
             item.style.opacity = '1';
           } else {
             item.style.display = 'none';

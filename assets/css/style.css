@@ -698,3 +698,219 @@ b, strong {
 .auth-card .form-control::placeholder {
   color: #94A3B8 !important;
 }
+
+/* ==========================================================================
+   UNIQUE PAGE DESIGN PATTERNS & ANIMATIONS
+   ========================================================================== */
+
+/* 1. Glassmorphic Panel Base */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.65) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+/* 2. Services Page: Staggered Bento Box Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  grid-auto-rows: 260px;
+}
+.bento-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+  z-index: 1;
+}
+.bento-item-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.bento-item-wide {
+  grid-column: span 2;
+}
+.bento-item-tall {
+  grid-row: span 2;
+}
+@media (max-width: 991px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+  .bento-item-large { grid-column: span 2; grid-row: span 2; }
+  .bento-item-wide { grid-column: span 2; }
+}
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+  .bento-item-large, .bento-item-wide, .bento-item-tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+.bento-bg-img {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.bento-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 10%, rgba(15, 23, 42, 0.4) 60%, rgba(15, 23, 42, 0.1) 100%);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.bento-content {
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.bento-content p {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.bento-item:hover .bento-bg-img {
+  transform: scale(1.1);
+}
+.bento-item:hover .bento-overlay {
+  background: linear-gradient(to top, rgba(37, 99, 235, 0.9) 10%, rgba(15, 23, 42, 0.6) 60%, rgba(15, 23, 42, 0.2) 100%);
+}
+.bento-item:hover .bento-content {
+  transform: translateY(0);
+}
+.bento-item:hover .bento-content p {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 3. Gallery Page: Immersive Masonry Wall & 3D Tilt */
+.masonry-wall {
+  columns: 3 320px;
+  column-gap: 1.5rem;
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.masonry-img {
+  width: 100%;
+  display: block;
+  border-radius: var(--border-radius);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.masonry-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+.masonry-item:hover .masonry-overlay {
+  opacity: 1;
+}
+.masonry-item:hover .masonry-img {
+  transform: scale(1.08);
+}
+/* 3D Tilt is handled via JS (Vanilla-Tilt) or fallback CSS hover */
+.tilt-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 40px rgba(37, 99, 235, 0.4);
+}
+
+/* Filter Animation */
+@keyframes scaleRotateIn {
+  0% { opacity: 0; transform: scale(0.8) rotate(-5deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+.scale-rotate-enter {
+  animation: scaleRotateIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* 4. Contact Page: Floating Glass Form */
+.contact-map-bg {
+  position: relative;
+  background: url('../images/hero-contact.png') center/cover fixed no-repeat;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+.contact-map-bg::before {
+  content: '';
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(15, 23, 42, 0.65);
+}
+.contact-glass-form {
+  position: relative;
+  z-index: 10;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  animation: slideInRight 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Bobbing Animation for Social Bubbles */
+@keyframes bobFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+.bobbing-element {
+  animation: bobFloat 4s ease-in-out infinite;
+}
+.bob-delay-1 { animation-delay: 1s; }
+.bob-delay-2 { animation-delay: 2s; }
+.bob-delay-3 { animation-delay: 3s; }
+
+/* Slide In Right */
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Stagger Fade Up */
+.stagger-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: staggerFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@keyframes staggerFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
