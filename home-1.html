@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicPulse 2026 - Political Campaign (Home)</title>
+  <meta name="description" content="Official Political Campaign Website for Senator Marcus Vance. Empowering local communities, promoting civic integrity, and driving economic prosperity for all.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- FIXED STICKY HEADER -->
+  <header class="navbar-sticky">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-brand m-0">
+        <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="header-logo">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="d-none d-lg-block">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Toggles & CTAs (Only Login Button per Rule) -->
+      <div class="d-flex align-items-center gap-2">
+        <a href="login.html" class="btn btn-primary-custom d-none d-sm-inline-flex ms-2">Login</a>
+        
+        <!-- Mobile Offcanvas Trigger -->
+        <button class="navbar-toggler d-lg-none header-toggle-btn p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas" aria-controls="mobileOffcanvas" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE OFFCANVAS NAVIGATION MENU -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileOffcanvas" aria-labelledby="mobileOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="header-logo" style="max-width: 140px;">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="nav flex-column gap-2">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Candidate</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Platform Priorities</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Campaign Trail Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Campaign</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Volunteer Dashboard</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top d-grid gap-2">
+        <a href="login.html" class="btn btn-primary-custom">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HOME HERO SECTION (WITH ATTRACTIVE BACKGROUND IMAGE & CENTER ALIGNMENT) -->
+    <section class="hero-home-wrapper">
+      <div class="container">
+        <div class="hero-content-center">
+          <span class="subheading">Official Campaign 2026</span>
+          <h1 class="display-3 text-white">Leadership Built On Trust &amp; Authentic Unity</h1>
+          <p class="lead-text text-light">
+            We are bringing people together across every neighborhood to champion transparent government, foster clean economic growth, and ensure vibrant education for future generations.
+          </p>
+          <div class="hero-btn-group">
+            <a href="contact.html" class="btn btn-tertiary-custom btn-lg">Join The Campaign</a>
+            <a href="services.html" class="btn btn-secondary-custom border-white text-white btn-lg">Explore Platform</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CORE CAMPAIGN PILLARS (RICH DARK SLATE CARDS) -->
+    <section class="py-section bg-section-var1">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="subheading">Our Core Platform</span>
+          <h2 class="text-white">Authentic Unity for Community Growth</h2>
+          <p class="text-light">Delivering concrete solutions built around accountability, job creation, and neighborhood safety.</p>
+        </div>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-economic.png" alt="Economic Prosperity" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Economic Prosperity</h3>
+                <p class="text-light">Support local small businesses, reduce redundant red tape, and attract modern high-tech clean energy investments.</p>
+                <div class="custom-card-footer mt-auto pt-2">
+                  <a href="service-details.html" class="btn btn-primary-custom w-100">Read Economic Policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-education.png" alt="Quality Education" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Quality Education</h3>
+                <p class="text-light">Expand public school funding, increase teacher compensation, and create vocational apprenticeship pipelines.</p>
+                <div class="custom-card-footer mt-auto pt-2">
+                  <a href="service-details.html" class="btn btn-primary-custom w-100">Read Education Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-healthcare.png" alt="Accessible Healthcare" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Accessible Healthcare</h3>
+                <p class="text-light">Lower prescription drug costs, safeguard community health clinics, and protect mental wellness initiatives.</p>
+                <div class="custom-card-footer mt-auto pt-2">
+                  <a href="service-details.html" class="btn btn-primary-custom w-100">Read Health Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-safety.png" alt="Community Safety" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Community Safety</h3>
+                <p class="text-light">Invest in neighborhood-first policing, youth development programs, and modern emergency response infrastructure.</p>
+                <div class="custom-card-footer mt-auto pt-2">
+                  <a href="service-details.html" class="btn btn-primary-custom w-100">Read Safety Agenda</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-environment.png" alt="Clean Environment" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Clean Environment</h3>
+                <p class="text-light">Protect local waterways, expand green solar initiatives, and preserve natural parks for future families.</p>
+                <div class="custom-card-footer mt-auto pt-2">
+                  <a href="service-details.html" class="btn btn-primary-custom w-100">Read Green Initiative</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-ethics.png" alt="Civic Integrity" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Civic Integrity</h3>
+                <p class="text-light">Enforce strict ethics rules, protect voting rights, and hold government spending fully accountable to taxpayers.</p>
+                <div class="custom-card-footer mt-auto pt-2">
+                  <a href="service-details.html" class="btn btn-primary-custom w-100">Read Reform Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CAMPAIGN STATISTICS (COLOR VARIATION 2: DEEP NAVY SLATE) -->
+    <section class="py-section bg-section-var2">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <h2 class="display-4 text-warning fw-bold mb-1"><span class="counter-val" data-target="18500">0</span>+</h2>
+              <p class="text-light mb-0">Active Volunteers</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <h2 class="display-4 text-warning fw-bold mb-1"><span class="counter-val" data-target="142">0</span></h2>
+              <p class="text-light mb-0">Townhalls Hosted</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <h2 class="display-4 text-warning fw-bold mb-1">$<span class="counter-val" data-target="24">0</span>M</h2>
+              <p class="text-light mb-0">Grassroots Raised</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <h2 class="display-4 text-warning fw-bold mb-1"><span class="counter-val" data-target="96">0</span>%</h2>
+              <p class="text-light mb-0">Community Approval</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WATCH LIVE & SPEECHES (COLOR VARIATION 1: DEEP SLATE NAVY) -->
+    <section class="py-section bg-section-var1">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="subheading">Live Speeches &amp; Broadcasts</span>
+          <h2 class="text-white">Watch Live Campaign Townhall</h2>
+          <p class="text-light">Tune in to live streaming debate sessions, policy addresses, and open community Q&amp;A sessions.</p>
+        </div>
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8 mx-auto text-center">
+            <div class="custom-card p-4">
+              <div class="position-relative mb-3 rounded overflow-hidden" style="background: #0B1329; min-height: 320px; display: flex; align-items: center; justify-content: center;">
+                <svg viewBox="0 0 800 450" class="w-100 h-100 position-absolute top-0 start-0">
+                  <rect width="800" height="450" fill="#0B1329"/>
+                  <circle cx="400" cy="225" r="120" fill="#2563EB" opacity="0.3"/>
+                  <text x="400" y="225" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">LIVE STREAM BROADCAST</text>
+                </svg>
+                <a href="gallery.html" class="btn btn-tertiary-custom position-relative z-1 btn-lg rounded-circle p-4">
+                  <i class="bi bi-play-fill fs-1"></i>
+                </a>
+              </div>
+              <h3 class="text-white">State Policy Address &amp; Live Q&amp;A</h3>
+              <p class="text-light mb-0">Broadcasted live from the Metro Convention Center with over 5,000 attendees participating in person.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: KEY ENDORSEMENTS (RICH DARK SLATE CARDS WITH WHITE TEXT) -->
+    <section class="py-section bg-section-var2">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="subheading text-warning">Community Support</span>
+          <h2 class="text-white">Key Endorsements &amp; Alliances</h2>
+          <p class="text-light">Proudly supported by coalitions of workers, educators, emergency responders, and small business councils.</p>
+        </div>
+        <div class="row g-4 text-start">
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-responders.png" alt="First Responders Alliance" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">First Responders Alliance</h3>
+                <p class="text-light mb-0">Endorsed for commitment to community safety, emergency services, and first responder pensions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-business.png" alt="Small Business Council" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Small Business Council</h3>
+                <p class="text-light mb-0">Endorsed for practical policies supporting local storefront growth, fair tax codes, and downtown renewal.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card p-0 overflow-hidden">
+              <img src="assets/images/card-water.png" alt="Clean Water Coalition" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="text-white">Clean Water Coalition</h3>
+                <p class="text-light mb-0">Endorsed for leading environmental protections across urban watersheds and municipal water systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GRASSROOTS CALL TO ACTION (GRADIENT VARIATION) -->
+    <section class="py-section text-white text-center" style="background: linear-gradient(135deg, #0F172A 0%, #2563EB 100%);">
+      <div class="container">
+        <div class="max-w-700 mx-auto">
+          <h2 class="text-white mb-3">Be The Spark For Real Community Change</h2>
+          <p class="lead-text text-light mb-4">Every door knocked and every conversation held brings us closer to a government that works for everyone.</p>
+          <div class="hero-btn-group">
+            <a href="contact.html" class="btn btn-tertiary-custom btn-lg">Contact Campaign</a>
+            <a href="about.html" class="btn btn-secondary-custom border-white text-white btn-lg">Learn About Candidate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER (EXACT SAME LOGO IMAGE AS HEADER) -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Logo & Motto -->
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html">
+            <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="footer-logo">
+          </a>
+          <p class="mt-2 mb-3 text-light">
+            CivicPulse 2026 is dedicated to building transparent, accountable, and prosperous communities through unity and action.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html">Service Details</a></li>
+            <li><a href="gallery.html">Media Gallery</a></li>
+            <li><a href="contact.html">Contact HQ</a></li>
+            <li><a href="dashboard.html">Volunteer Portal</a></li>
+            <li><a href="login.html">Supporter Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-title">Stay Informed</h4>
+          <p class="small text-light">Subscribe to get live townhall alerts and campaign updates straight to your inbox.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-tertiary-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0 small text-light">&copy; 2026 CivicPulse Campaign. All Rights Reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-light text-decoration-none opacity-75">Privacy Policy</a>
+          <a href="#" class="text-light text-decoration-none opacity-75">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mandatory Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+    <i class="bi bi-arrow-up fs-5"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

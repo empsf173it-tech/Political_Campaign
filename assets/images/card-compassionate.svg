@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="compBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#compBg)"/>
+  <circle cx="200" cy="100" r="75" fill="#EF4444" opacity="0.2"/>
+  <!-- Compassionate Care Heart & Helping Hands -->
+  <path d="M200 145 C150 100 140 70 170 60 C188 54 200 68 200 68 C200 68 212 54 230 60 C260 70 250 100 200 145 Z" fill="#2563EB"/>
+  <path d="M180 105 L200 120 L220 105" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign Trail Gallery - CivicPulse 2026</title>
+  <meta name="description" content="Explore high-resolution photographic moments and video highlights from Marcus Vance's campaign trail.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- FIXED STICKY HEADER -->
+  <header class="navbar-sticky">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand m-0">
+        <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="header-logo">
+      </a>
+
+      <nav class="d-none d-lg-block">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <a href="login.html" class="btn btn-primary-custom d-none d-sm-inline-flex ms-2">Login</a>
+        <button class="navbar-toggler d-lg-none header-toggle-btn p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="header-logo" style="max-width: 140px;">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="nav flex-column gap-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Candidate</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Platform Priorities</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Campaign Trail Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Campaign</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Volunteer Dashboard</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top d-grid gap-2">
+        <a href="login.html" class="btn btn-primary-custom">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: GALLERY HERO SECTION (STANDARDIZED 640PX HERO HEIGHT) -->
+    <section class="hero-gallery-wrapper">
+      <div class="container">
+        <div class="hero-content-center">
+          <span class="subheading text-warning">Campaign Trail Photography</span>
+          <h1 class="text-white display-3">Photo &amp; Video Media Gallery</h1>
+          <p class="lead-text text-light max-w-700 mx-auto">
+            Explore authentic moments from townhall debates, grassroots volunteer drives, and community rallies across the district.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PHOTO GALLERY (INTERACTIVE FILTERABLE PHOTO CARDS) -->
+    <section class="py-section bg-section-var1">
+      <div class="container">
+        <div class="section-title-wrapper text-center">
+          <span class="subheading">Visual Evidence of Impact</span>
+          <h2 class="text-white">On The Campaign Trail</h2>
+          <p class="text-light">Moments captured from townhalls, neighborhood door-knocking, and community rallies across the district.</p>
+        </div>
+
+        <!-- Filter Buttons (Interactive Category Switching) -->
+        <div class="d-flex justify-content-center gap-2 flex-wrap mb-5">
+          <button class="btn btn-tertiary-custom active px-4 py-2" data-filter="all">All Photos</button>
+          <button class="btn btn-secondary-custom px-4 py-2" data-filter="townhall">Townhalls</button>
+          <button class="btn btn-secondary-custom px-4 py-2" data-filter="rally">Rallies</button>
+          <button class="btn btn-secondary-custom px-4 py-2" data-filter="community">Community</button>
+        </div>
+
+        <!-- Gallery Grid (6 Unique Photo Cards with Data Categories) -->
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 gallery-item townhall">
+            <div class="custom-card p-0 overflow-hidden text-start">
+              <img src="assets/images/gallery-photo-1.png" alt="Metro Convention Hall" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="fs-5 text-white fw-bold mb-1">Metro Convention Hall</h3>
+                <p class="small text-light mb-0">District 1 Open Q&amp;A Session</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item rally">
+            <div class="custom-card p-0 overflow-hidden text-start">
+              <img src="assets/images/gallery-photo-2.png" alt="West District Arena" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="fs-5 text-white fw-bold mb-1">West District Arena</h3>
+                <p class="small text-light mb-0">Over 4,000 Voters Attending</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item community">
+            <div class="custom-card p-0 overflow-hidden text-start">
+              <img src="assets/images/gallery-photo-3.png" alt="Main Street Walkthrough" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="fs-5 text-white fw-bold mb-1">Main Street Walkthrough</h3>
+                <p class="small text-light mb-0">Meeting Local Business Owners</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item townhall">
+            <div class="custom-card p-0 overflow-hidden text-start">
+              <img src="assets/images/gallery-photo-4.png" alt="Eastside Policy Debate" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="fs-5 text-white fw-bold mb-1">Eastside Policy Debate</h3>
+                <p class="small text-light mb-0">Education Reform Discussion</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item community">
+            <div class="custom-card p-0 overflow-hidden text-start">
+              <img src="assets/images/gallery-photo-5.png" alt="Civic Park Celebration" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="fs-5 text-white fw-bold mb-1">Civic Park Celebration</h3>
+                <p class="small text-light mb-0">Annual Community Unity Picnic</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item rally">
+            <div class="custom-card p-0 overflow-hidden text-start">
+              <img src="assets/images/gallery-photo-6.png" alt="Youth Canvassing Drive" class="custom-card-img m-0">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="fs-5 text-white fw-bold mb-1">Youth Canvassing Drive</h3>
+                <p class="small text-light mb-0">Over 200 Student Volunteer Leads</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: VIDEO HIGHLIGHTS (2 UNIQUE VIDEO SPEECH CARDS WITH PLAY OVERLAY) -->
+    <section class="py-section bg-section-var2">
+      <div class="container">
+        <div class="section-title-wrapper text-center">
+          <span class="subheading text-warning">Video Highlights</span>
+          <h2 class="text-white">Watch Featured Speeches</h2>
+          <p class="text-light">Keynote addresses, televised debate clips, and townhall stream archives.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="custom-card p-0 overflow-hidden position-relative">
+              <div class="position-relative overflow-hidden">
+                <img src="assets/images/gallery-video-1.png" alt="Keynote Address at State Capitol" class="custom-card-img m-0 w-100" style="height: 260px; object-fit: cover;">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                  <a href="#" class="btn btn-tertiary-custom rounded-circle p-3 shadow-lg" aria-label="Play Keynote Address">
+                    <i class="bi bi-play-fill fs-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="fs-5 text-white fw-bold mb-1">Keynote Address at State Capitol</h3>
+                <p class="small text-light mb-0">Full recording of Marcus Vance co-authoring bipartisan legislation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="custom-card p-0 overflow-hidden position-relative">
+              <div class="position-relative overflow-hidden">
+                <img src="assets/images/gallery-video-2.png" alt="Public Education Townhall Address" class="custom-card-img m-0 w-100" style="height: 260px; object-fit: cover;">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                  <a href="#" class="btn btn-tertiary-custom rounded-circle p-3 shadow-lg" aria-label="Play Public Education Townhall">
+                    <i class="bi bi-play-fill fs-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="fs-5 text-white fw-bold mb-1">Public Education Townhall Address</h3>
+                <p class="small text-light mb-0">Open address detailing $120M education infrastructure plan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER (EXACT SAME LOGO IMAGE AS HEADER) -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html">
+            <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="footer-logo">
+          </a>
+          <p class="mt-2 mb-3 text-light">
+            CivicPulse 2026 is dedicated to building transparent, accountable, and prosperous communities through unity and action.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html">Service Details</a></li>
+            <li><a href="gallery.html">Media Gallery</a></li>
+            <li><a href="contact.html">Contact HQ</a></li>
+            <li><a href="dashboard.html">Volunteer Portal</a></li>
+            <li><a href="login.html">Supporter Login</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-title">Stay Informed</h4>
+          <p class="small text-light">Subscribe to get live townhall alerts and campaign updates straight to your inbox.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-tertiary-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0 small text-light">&copy; 2026 CivicPulse Campaign. All Rights Reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-light text-decoration-none opacity-75">Privacy Policy</a>
+          <a href="#" class="text-light text-decoration-none opacity-75">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+    <i class="bi bi-arrow-up fs-5"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supporter Login - CivicPulse 2026</title>
+  <meta name="description" content="Login to your CivicPulse campaign supporter account.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="background-color: #0F172A; padding-top: 0;">
+
+  <!-- CENTERED AUTH CARD CONTAINER (NO RTL/THEME TOGGLE BUTTONS) -->
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <!-- Site Logo Inside Card -->
+      <div class="text-center mb-4">
+        <a href="index.html">
+          <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="header-logo mb-3" style="max-width: 170px;">
+        </a>
+        <h2 class="h3 mb-1 text-white fw-bold">Supporter Portal</h2>
+        <p class="small text-light mb-0">Enter your credentials to access your campaign dashboard.</p>
+      </div>
+
+      <form>
+        <!-- Email Field -->
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label text-white fw-bold small">Email Address</label>
+          <input type="email" class="form-control text-white bg-dark border-secondary" id="loginEmail" placeholder="name@example.com" required>
+        </div>
+
+        <!-- Password Field with Eye Toggle -->
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label text-white fw-bold small">Password</label>
+          <div class="password-toggle-group position-relative">
+            <input type="password" class="form-control text-white bg-dark border-secondary" id="loginPassword" placeholder="Enter password" required>
+            <i class="bi bi-eye password-toggle-eye text-warning position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer" data-target="loginPassword" aria-label="Toggle password visibility"></i>
+          </div>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="d-flex justify-content-between align-items-center mb-4 small">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberMe">
+            <label class="form-check-label text-light fw-medium" for="rememberMe">Remember me</label>
+          </div>
+          <a href="#" class="text-warning text-decoration-none fw-bold">Forgot password?</a>
+        </div>
+
+        <!-- Login CTA Button Matching Input Width -->
+        <div class="d-grid mb-4">
+          <a href="dashboard.html" class="btn btn-primary-custom btn-lg w-100 fw-bold">Sign In</a>
+        </div>
+
+        <!-- Social Login Options -->
+        <div class="text-center mb-4">
+          <p class="small text-light mb-3">or continue with</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <button type="button" class="btn btn-outline-light w-50 d-flex align-items-center justify-content-center gap-2 py-2">
+              <i class="bi bi-google text-danger fs-5"></i> <span class="fw-semibold">Google</span>
+            </button>
+            <button type="button" class="btn btn-outline-light w-50 d-flex align-items-center justify-content-center gap-2 py-2">
+              <i class="bi bi-apple text-white fs-5"></i> <span class="fw-semibold">Apple</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Link to Signup -->
+        <div class="text-center small pt-2 border-top border-secondary border-opacity-25">
+          <span class="text-light">Don't have a supporter account?</span>
+          <a href="register.html" class="text-warning fw-bold text-decoration-none ms-1">Create Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

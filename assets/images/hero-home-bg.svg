@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Rich Background Gradient -->
+    <linearGradient id="homeBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="40%" stop-color="#1E293B"/>
+      <stop offset="80%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#050B14"/>
+    </linearGradient>
+
+    <!-- Civic Blue Glow -->
+    <radialGradient id="blueGlow" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#1D4ED8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Amber Gold Spotlight -->
+    <radialGradient id="goldGlow" cx="70%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#D97706" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dynamic Wave Ribbon Gradient 1 -->
+    <linearGradient id="ribbonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Dynamic Wave Ribbon Gradient 2 -->
+    <linearGradient id="ribbonGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#FBBF24" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Dark Canvas -->
+  <rect width="1920" height="1080" fill="url(#homeBgGrad)"/>
+
+  <!-- Radial Glow Spheres -->
+  <circle cx="500" cy="350" r="700" fill="url(#blueGlow)"/>
+  <circle cx="1400" cy="450" r="600" fill="url(#goldGlow)"/>
+  <circle cx="960" cy="500" r="450" fill="#2563EB" opacity="0.12"/>
+
+  <!-- Patriotic Dynamic Wave Ribbons -->
+  <path d="M-100,750 C400,450 800,950 1300,550 C1650,270 1950,450 2050,350 L2050,1080 L-100,1080 Z" fill="url(#ribbonBlue)"/>
+  <path d="M-100,850 C500,550 900,1000 1400,650 C1750,400 2000,500 2050,450 L2050,1080 L-100,1080 Z" fill="url(#ribbonGold)"/>
+
+  <!-- Geometric Capitol Dome & Civic Rays Silhouette in Background -->
+  <g opacity="0.08" stroke="#FFFFFF" stroke-width="1.5" fill="none">
+    <path d="M960,220 C840,320 840,480 840,550 L1080,550 C1080,480 1080,320 960,220 Z"/>
+    <line x1="960" y1="140" x2="960" y2="220"/>
+    <line x1="700" y1="550" x2="1220" y2="550"/>
+    <circle cx="960" cy="380" r="70"/>
+  </g>
+
+  <!-- Floating Civic Star Constellations -->
+  <!-- Star 1 (Center Top) -->
+  <polygon points="960,130 966,148 985,148 970,159 975,177 960,166 945,177 950,159 935,148 954,148" fill="#F59E0B" opacity="0.85"/>
+  <!-- Star 2 (Left) -->
+  <polygon points="420,220 424,232 436,232 426,240 430,252 420,244 410,252 414,240 404,232 416,232" fill="#2563EB" opacity="0.75"/>
+  <!-- Star 3 (Right) -->
+  <polygon points="1500,200 1504,212 1516,212 1506,220 1510,232 1500,224 1490,232 1494,220 1484,212 1496,212" fill="#F59E0B" opacity="0.75"/>
+  <!-- Small Accent Stars -->
+  <polygon points="760,260 762,267 770,267 763,272 766,279 760,274 754,279 757,272 750,267 758,267" fill="#FFFFFF" opacity="0.6"/>
+  <polygon points="1160,280 1162,287 1170,287 1163,292 1166,299 1160,294 1154,299 1157,292 1150,287 1158,287" fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- Digital Grid & Horizon Lines -->
+  <line x1="0" y1="280" x2="1920" y2="280" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+  <line x1="0" y1="520" x2="1920" y2="520" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+  <line x1="0" y1="760" x2="1920" y2="760" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+</svg>

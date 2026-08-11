@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Campaign Headquarters - CivicPulse 2026</title>
+  <meta name="description" content="Reach out to Senator Marcus Vance's campaign team. Regional office locations, interactive map, social channels, and direct inquiry form.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- FIXED STICKY HEADER -->
+  <header class="navbar-sticky">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand m-0">
+        <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="header-logo">
+      </a>
+
+      <nav class="d-none d-lg-block">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <a href="login.html" class="btn btn-primary-custom d-none d-sm-inline-flex ms-2">Login</a>
+        <button class="navbar-toggler d-lg-none header-toggle-btn p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="header-logo" style="max-width: 140px;">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="nav flex-column gap-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Candidate</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Platform Priorities</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Campaign Trail Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Campaign</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Volunteer Dashboard</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top d-grid gap-2">
+        <a href="login.html" class="btn btn-primary-custom">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: SUBPAGE HERO SECTION (UNIQUE CAMPAIGN HEADQUARTERS OFFICE PHOTO) -->
+    <section class="hero-contact-wrapper">
+      <div class="container">
+        <div class="hero-content-center">
+          <span class="subheading text-warning">Get In Touch</span>
+          <h1 class="text-white display-3">Contact Campaign Headquarters</h1>
+          <p class="lead-text text-light max-w-700 mx-auto">
+            Our staff and regional volunteer leads are ready to answer your questions, coordinate press inquiries, or connect you with local canvassing teams.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: REGIONAL OFFICE CARDS (BALANCED CARDS - ZERO EMPTY SPACES) -->
+    <section class="py-section bg-section-var1">
+      <div class="container">
+        <div class="section-title-wrapper text-center">
+          <span class="subheading text-warning">Locations</span>
+          <h2 class="text-white">Campaign Offices Across The State</h2>
+          <p class="text-light">Visit or call any of our 3 regional campaign headquarters.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="custom-card p-4 text-start h-100">
+              <div class="mb-3 text-warning"><i class="bi bi-building fs-1"></i></div>
+              <h3 class="text-white fs-4 fw-bold">State Campaign HQ</h3>
+              <p class="small text-light mb-2"><i class="bi bi-geo-alt me-2 text-warning"></i> 100 Civic Plaza Suite 400, Capital City</p>
+              <p class="small text-light mb-2"><i class="bi bi-telephone me-2 text-warning"></i> (555) 019-2831</p>
+              <p class="small text-light mb-0"><i class="bi bi-envelope me-2 text-warning"></i> hq@civicpulse2026.org</p>
+              <div class="custom-card-footer mt-auto pt-3">
+                <a href="#contactForm" class="btn btn-secondary-custom w-100">Send Direct Message</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="custom-card p-4 text-start h-100">
+              <div class="mb-3 text-warning"><i class="bi bi-geo-alt fs-1"></i></div>
+              <h3 class="text-white fs-4 fw-bold">West District Office</h3>
+              <p class="small text-light mb-2"><i class="bi bi-geo-alt me-2 text-warning"></i> 450 Commerce Street, Westville</p>
+              <p class="small text-light mb-2"><i class="bi bi-telephone me-2 text-warning"></i> (555) 019-8822</p>
+              <p class="small text-light mb-0"><i class="bi bi-envelope me-2 text-warning"></i> west@civicpulse2026.org</p>
+              <div class="custom-card-footer mt-auto pt-3">
+                <a href="#contactForm" class="btn btn-secondary-custom w-100">Send Direct Message</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="custom-card p-4 text-start h-100">
+              <div class="mb-3 text-warning"><i class="bi bi-geo-alt fs-1"></i></div>
+              <h3 class="text-white fs-4 fw-bold">Eastside Field HQ</h3>
+              <p class="small text-light mb-2"><i class="bi bi-geo-alt me-2 text-warning"></i> 782 East Avenue, Eastport</p>
+              <p class="small text-light mb-2"><i class="bi bi-telephone me-2 text-warning"></i> (555) 019-4411</p>
+              <p class="small text-light mb-0"><i class="bi bi-envelope me-2 text-warning"></i> east@civicpulse2026.org</p>
+              <div class="custom-card-footer mt-auto pt-3">
+                <a href="#contactForm" class="btn btn-secondary-custom w-100">Send Direct Message</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 2-COLUMN CONTACT FORM & INTERACTIVE MAP + SOCIAL MEDIA (ZERO EMPTY SPACES) -->
+    <section class="py-section bg-section-var2 text-white" id="contactForm">
+      <div class="container">
+        <div class="row g-5 align-items-stretch">
+          <!-- Left Column: Direct Inquiry Form -->
+          <div class="col-lg-6">
+            <div class="custom-card p-4 p-md-5 h-100">
+              <span class="subheading text-warning d-block mb-1">Direct Outreach</span>
+              <h2 class="text-white mb-3">Send Us A Message</h2>
+              <p class="text-light mb-4 small">Fill out the form below and a campaign representative will respond within 24 hours.</p>
+              
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <label for="cName" class="form-label text-white fw-bold">Your Full Name</label>
+                  <input type="text" class="form-control" id="cName" placeholder="e.g. Sarah Jenkins" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="cEmail" class="form-label text-white fw-bold">Email Address</label>
+                  <input type="email" class="form-control" id="cEmail" placeholder="name@domain.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="cPhone" class="form-label text-white fw-bold">Phone Number</label>
+                  <input type="tel" class="form-control" id="cPhone" placeholder="(555) 000-0000">
+                </div>
+                <div class="col-md-6">
+                  <label for="cSubject" class="form-label text-white fw-bold">Inquiry Type</label>
+                  <select class="form-select" id="cSubject" required>
+                    <option value="" selected disabled>Select inquiry type...</option>
+                    <option>General Question</option>
+                    <option>Volunteer Opportunities</option>
+                    <option>Press &amp; Media Inquiry</option>
+                    <option>Policy Feedback</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="cMessage" class="form-label text-white fw-bold">Your Message</label>
+                  <textarea class="form-control" id="cMessage" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary-custom btn-lg w-100">Submit Inquiry</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Map Support & Social Media Channels -->
+          <div class="col-lg-6 d-flex flex-column gap-4">
+            <!-- Interactive Map Container -->
+            <div class="custom-card p-0 overflow-hidden shadow-lg border-0">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-77.042,38.895,-77.032,38.905&amp;layer=mapnik" style="border: 0;" allowfullscreen="" loading="lazy" title="Campaign Headquarters Location Map"></iframe>
+              </div>
+              <div class="p-3 bg-section-var3 text-white d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                  <h4 class="text-white fs-6 mb-0 fw-bold"><i class="bi bi-geo-alt-fill text-warning me-2"></i>State HQ Location Map</h4>
+                  <p class="small text-light mb-0">100 Civic Plaza Suite 400, Capital City</p>
+                </div>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-tertiary-custom btn-sm">Get Directions</a>
+              </div>
+            </div>
+
+            <!-- Social Media Channels Box -->
+            <div class="custom-card p-4 flex-grow-1">
+              <h3 class="text-white fs-5 fw-bold mb-2"><i class="bi bi-share-fill text-warning me-2"></i>Connect Across Social Channels</h3>
+              <p class="small text-light mb-3">Follow live campaign updates, debate broadcasts, townhall streams, and press releases:</p>
+              
+              <div class="row g-2">
+                <div class="col-6 col-sm-4">
+                  <a href="https://facebook.com" target="_blank" class="btn btn-secondary-custom btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2 p-2">
+                    <i class="bi bi-facebook text-primary fs-5"></i>
+                    <span>Facebook</span>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a href="https://twitter.com" target="_blank" class="btn btn-secondary-custom btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2 p-2">
+                    <i class="bi bi-twitter-x text-info fs-5"></i>
+                    <span>Twitter / X</span>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a href="https://instagram.com" target="_blank" class="btn btn-secondary-custom btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2 p-2">
+                    <i class="bi bi-instagram text-danger fs-5"></i>
+                    <span>Instagram</span>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a href="https://youtube.com" target="_blank" class="btn btn-secondary-custom btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2 p-2">
+                    <i class="bi bi-youtube text-danger fs-5"></i>
+                    <span>YouTube</span>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a href="https://linkedin.com" target="_blank" class="btn btn-secondary-custom btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2 p-2">
+                    <i class="bi bi-linkedin text-primary fs-5"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a href="https://whatsapp.com" target="_blank" class="btn btn-secondary-custom btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2 p-2">
+                    <i class="bi bi-whatsapp text-success fs-5"></i>
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FAQ SECTION (COLOR VARIATION 1: SOFT SLATE TINT) -->
+    <section class="py-section bg-section-var1">
+      <div class="container">
+        <div class="section-title-wrapper text-center">
+          <span class="subheading text-warning">Common Questions</span>
+          <h2 class="text-white">Frequently Asked Questions</h2>
+          <p class="text-light">Quick answers to common questions about campaign activities and volunteering.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="custom-card p-4 h-100 text-start">
+              <h3 class="fs-5 text-white fw-bold mb-2">How can I request Marcus Vance for a speech?</h3>
+              <p class="small text-light mb-0">Submit an inquiry using the Press &amp; Media option above, specifying event date, venue, and estimated attendance.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="custom-card p-4 h-100 text-start">
+              <h3 class="fs-5 text-white fw-bold mb-2">Where do I pick up campaign yard signs?</h3>
+              <p class="small text-light mb-0">Yard signs are available at any of our three regional offices during standard operating hours (9 AM - 6 PM).</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="custom-card p-4 h-100 text-start">
+              <h3 class="fs-5 text-white fw-bold mb-2">Can high school students volunteer?</h3>
+              <p class="small text-light mb-0">Yes. Student volunteers earn community service hours for door canvassing and digital phone banking.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="custom-card p-4 h-100 text-start">
+              <h3 class="fs-5 text-white fw-bold mb-2">How can I submit policy ideas?</h3>
+              <p class="small text-light mb-0">You can write directly to our policy drafting committee via the contact form above.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html">
+            <img src="assets/images/logo.svg" alt="CivicPulse Logo" class="footer-logo">
+          </a>
+          <p class="mt-2 mb-3 text-light">
+            CivicPulse 2026 is dedicated to building transparent, accountable, and prosperous communities through unity and action.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html">Service Details</a></li>
+            <li><a href="gallery.html">Media Gallery</a></li>
+            <li><a href="contact.html">Contact HQ</a></li>
+            <li><a href="dashboard.html">Volunteer Portal</a></li>
+            <li><a href="login.html">Supporter Login</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-title">Stay Informed</h4>
+          <p class="small text-light">Subscribe to get live townhall alerts and campaign updates straight to your inbox.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-tertiary-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0 small text-light">&copy; 2026 CivicPulse Campaign. All Rights Reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-light text-decoration-none opacity-75">Privacy Policy</a>
+          <a href="#" class="text-light text-decoration-none opacity-75">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+    <i class="bi bi-arrow-up fs-5"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

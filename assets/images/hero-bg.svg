@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#1E293B" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Dark Canvas -->
+  <rect width="1920" height="1080" fill="#0F172A"/>
+
+  <!-- Wave Waves and Geometric Waves -->
+  <path d="M0,300 Q480,150 960,300 T1920,300 L1920,1080 L0,1080 Z" fill="url(#bgGrad)"/>
+  <path d="M0,450 Q480,250 960,450 T1920,450 L1920,1080 L0,1080 Z" fill="url(#accentGlow)"/>
+
+  <!-- Subtle Radial Spotlight Glow -->
+  <circle cx="960" cy="400" r="500" fill="#2563EB" opacity="0.15"/>
+  <circle cx="960" cy="350" r="300" fill="#F59E0B" opacity="0.1"/>
+
+  <!-- Decorative Stars Motif -->
+  <polygon points="960,120 965,135 980,135 967,144 972,159 960,150 948,159 953,144 940,135 955,135" fill="#F59E0B" opacity="0.4"/>
+  <polygon points="860,140 863,150 873,150 865,156 868,166 860,160 852,166 855,156 847,150 857,150" fill="#2563EB" opacity="0.4"/>
+  <polygon points="1060,140 1063,150 1073,150 1065,156 1068,166 1060,160 1052,166 1055,156 1047,150 1057,150" fill="#2563EB" opacity="0.4"/>
+
+  <!-- Abstract Civic Grid Lines -->
+  <line x1="0" y1="200" x2="1920" y2="200" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="400" x2="1920" y2="400" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="600" x2="1920" y2="600" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+</svg>

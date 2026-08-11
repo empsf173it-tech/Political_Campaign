@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bipBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bipBg)"/>
+  <circle cx="200" cy="100" r="75" fill="#2563EB" opacity="0.2"/>
+  <!-- Handshake Unity Icon -->
+  <path d="M120 120 L160 85 L190 100 L210 85 L240 100 L280 75 L280 120 Z" fill="#2563EB"/>
+  <path d="M160 85 L180 70 L220 100 L200 115 Z" fill="#F59E0B"/>
+  <circle cx="160" cy="65" r="16" fill="#FFFFFF"/>
+  <circle cx="240" cy="65" r="16" fill="#FFFFFF"/>
+</svg>

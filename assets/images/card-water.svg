@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="watBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#watBg)"/>
+  <circle cx="200" cy="100" r="75" fill="#3B82F6" opacity="0.2"/>
+  <!-- Clean Water Drop & Ecological Waves -->
+  <path d="M200 45 C200 45 245 105 245 130 C245 155 225 165 200 165 C175 165 155 155 155 130 C155 105 200 45 200 45 Z" fill="#2563EB"/>
+  <path d="M185 110 C185 110 215 110 225 135" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

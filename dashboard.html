@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Dashboard - CivicPulse 2026</title>
+  <meta name="description" content="Campaign volunteer and precinct management dashboard for CivicPulse 2026.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="padding-top: 0; background-color: #0F172A;">
+
+  <div class="d-flex min-vh-100 position-relative">
+    <!-- DASHBOARD SIDEBAR NAVIGATION (HIGH CONTRAST DARK NAVY) -->
+    <aside class="p-3 d-flex flex-column justify-content-between" id="dashboardSidebar" style="width: 260px; min-height: 100vh; flex-shrink: 0; background-color: #0B1329;">
+      <div>
+        <!-- Brand Logo -->
+        <div class="mb-4 pb-3 border-bottom border-secondary border-opacity-25 d-flex align-items-center justify-content-between">
+          <a href="index.html">
+            <img src="assets/images/logo.svg" alt="CivicPulse Logo" style="max-width: 160px;">
+          </a>
+        </div>
+
+        <!-- Sidebar Navigation Menu (Interactive Tab Triggers) -->
+        <ul class="nav flex-column gap-2" id="dashboardNav">
+          <li class="nav-item">
+            <button class="nav-link active px-3 py-2 w-100 text-start border-0 bg-transparent" data-tab="overview">
+              <i class="bi bi-speedometer2 me-2"></i> Overview
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link px-3 py-2 w-100 text-start border-0 bg-transparent" data-tab="volunteers">
+              <i class="bi bi-people me-2"></i> Volunteers
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link px-3 py-2 w-100 text-start border-0 bg-transparent" data-tab="contributions">
+              <i class="bi bi-cash-stack me-2"></i> Contributions
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link px-3 py-2 w-100 text-start border-0 bg-transparent" data-tab="messages">
+              <i class="bi bi-chat-left-dots me-2"></i> Messages
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link px-3 py-2 w-100 text-start border-0 bg-transparent" data-tab="settings">
+              <i class="bi bi-gear me-2"></i> Settings
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Logout Button in Sidebar -->
+      <div class="pt-3 border-top border-secondary border-opacity-25">
+        <a href="login.html" class="btn btn-outline-light w-100 d-flex align-items-center justify-content-center gap-2">
+          <i class="bi bi-box-arrow-right"></i> <span class="fw-bold">Log Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT AREA -->
+    <div class="flex-grow-1 bg-section-var1 p-4 overflow-x-hidden">
+      <!-- HEADER & WELCOME OVERVIEW -->
+      <section class="mb-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pb-3 border-bottom border-secondary border-opacity-25">
+          <div class="d-flex align-items-center gap-3">
+            <button type="button" class="btn btn-outline-light d-lg-none" id="sidebarToggleBtn" aria-label="Toggle Sidebar">
+              <i class="bi bi-list"></i>
+            </button>
+            <div>
+              <h1 class="h2 mb-1 text-white fw-bold" id="dashboardTabTitle">Volunteer Campaign Dashboard</h1>
+              <p class="mb-0 text-light font-medium">Welcome back, <strong class="text-warning fw-bold">Captain Sarah Jenkins</strong> (District 4 Lead)</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="dropdown">
+              <button class="btn btn-outline-light position-relative p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell-fill fs-5 text-warning"></i>
+                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow border-0 bg-section-var2">
+                <li><h6 class="dropdown-header fw-bold text-warning">Notifications</h6></li>
+                <li><a class="dropdown-item fw-medium text-white" href="#">New townhall RSVP in District 4</a></li>
+                <li><a class="dropdown-item fw-medium text-white" href="#">Canvassing target hit! (1,200 doors)</a></li>
+              </ul>
+            </div>
+            <div class="d-flex align-items-center gap-2 border-start border-secondary border-opacity-25 ps-3">
+              <div class="rounded-circle bg-primary text-white fw-bold d-flex align-items-center justify-content-center shadow-sm" style="width: 42px; height: 42px; font-size: 1.1rem;">SJ</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 1: OVERVIEW -->
+      <div class="dashboard-tab-pane active" id="tab-overview">
+        <!-- METRIC OVERVIEW CARDS GRID -->
+        <section class="mb-4">
+          <div class="row g-3">
+            <div class="col-sm-6 col-xl-3">
+              <div class="custom-card p-3 shadow-sm border-secondary border-opacity-25">
+                <span class="text-light fw-bold fs-6">Active Canvassers</span>
+                <h2 class="display-6 fw-bold my-1 text-white">1,248</h2>
+                <span class="small fw-bold text-success"><i class="bi bi-arrow-up-right"></i> +12% this week</span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="custom-card p-3 shadow-sm border-secondary border-opacity-25">
+                <span class="text-light fw-bold fs-6">Grassroots Contributions</span>
+                <h2 class="display-6 fw-bold my-1 text-white">$485,200</h2>
+                <span class="small fw-bold text-success"><i class="bi bi-arrow-up-right"></i> +8% vs goal</span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="custom-card p-3 shadow-sm border-secondary border-opacity-25">
+                <span class="text-light fw-bold fs-6">Townhall RSVP Passes</span>
+                <h2 class="display-6 fw-bold my-1 text-white">4,820</h2>
+                <span class="small fw-bold text-success"><i class="bi bi-check-circle-fill"></i> 96% Capacity</span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="custom-card p-3 shadow-sm border-secondary border-opacity-25">
+                <span class="text-light fw-bold fs-6">Doors Knocked</span>
+                <h2 class="display-6 fw-bold my-1 text-white">38,500</h2>
+                <span class="small fw-bold text-success"><i class="bi bi-arrow-up-right"></i> Target Met</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALYTICS CHART & PRECINCT STATS -->
+        <section class="mb-4">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="custom-card p-4 shadow-sm border-secondary border-opacity-25">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h3 class="h4 fw-bold text-white mb-0">Monthly Activity &amp; Volunteer Growth</h3>
+                  <span class="badge bg-primary fs-6 px-3 py-2">2026 Campaign Cycle</span>
+                </div>
+                <canvas id="campaignMetricsChart" class="w-100" style="max-height: 280px;"></canvas>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="custom-card p-4 shadow-sm border-secondary border-opacity-25">
+                <h3 class="h4 fw-bold text-white mb-4">Precinct Progress</h3>
+                
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold text-white">District 1 (Downtown)</span>
+                    <span class="fw-bold text-warning">85%</span>
+                  </div>
+                  <div class="progress" style="height: 10px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-primary" style="width: 85%"></div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold text-white">District 2 (Eastside)</span>
+                    <span class="fw-bold text-success">92%</span>
+                  </div>
+                  <div class="progress" style="height: 10px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-success" style="width: 92%"></div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold text-white">District 3 (Westville)</span>
+                    <span class="fw-bold text-warning">78%</span>
+                  </div>
+                  <div class="progress" style="height: 10px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-warning" style="width: 78%"></div>
+                  </div>
+                </div>
+
+                <div class="mb-0">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold text-white">District 4 (North Suburbs)</span>
+                    <span class="fw-bold text-info">96%</span>
+                  </div>
+                  <div class="progress" style="height: 10px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-info" style="width: 96%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECENT CONTRIBUTIONS TABLE -->
+        <section class="mb-4">
+          <div class="custom-card p-4 shadow-sm border-secondary border-opacity-25">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h4 fw-bold text-white mb-0">Recent Grassroots Contributions</h3>
+              <a href="#" class="btn btn-secondary-custom btn-sm fw-bold">Export CSV</a>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle table-dark table-hover mb-0">
+                <thead>
+                  <tr class="border-bottom border-secondary border-opacity-50">
+                    <th scope="col" class="py-3 text-warning">Contributor</th>
+                    <th scope="col" class="py-3 text-warning">District</th>
+                    <th scope="col" class="py-3 text-warning">Tier</th>
+                    <th scope="col" class="py-3 text-warning">Amount</th>
+                    <th scope="col" class="py-3 text-warning">Date</th>
+                    <th scope="col" class="py-3 text-warning">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="py-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="rounded-circle bg-secondary text-white fw-bold d-flex align-items-center justify-content-center" style="width: 34px; height: 34px; font-size: 0.85rem;">MR</div>
+                        <span class="fw-bold text-white">Michael Ross</span>
+                      </div>
+                    </td>
+                    <td class="fw-semibold text-light">District 4</td>
+                    <td><span class="badge bg-primary fs-6 px-3 py-1">Advocate</span></td>
+                    <td class="fw-bold text-white fs-6">$100.00</td>
+                    <td class="fw-medium text-light">Aug 11, 2026</td>
+                    <td><span class="badge bg-success fs-6 px-3 py-1">Verified</span></td>
+                  </tr>
+                  <tr>
+                    <td class="py-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="rounded-circle bg-primary text-white fw-bold d-flex align-items-center justify-content-center" style="width: 34px; height: 34px; font-size: 0.85rem;">KL</div>
+                        <span class="fw-bold text-white">Karen Lin</span>
+                      </div>
+                    </td>
+                    <td class="fw-semibold text-light">District 2</td>
+                    <td><span class="badge bg-secondary fs-6 px-3 py-1">Supporter</span></td>
+                    <td class="fw-bold text-white fs-6">$25.00</td>
+                    <td class="fw-medium text-light">Aug 11, 2026</td>
+                    <td><span class="badge bg-success fs-6 px-3 py-1">Verified</span></td>
+                  </tr>
+                  <tr>
+                    <td class="py-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="rounded-circle bg-warning text-dark fw-bold d-flex align-items-center justify-content-center" style="width: 34px; height: 34px; font-size: 0.85rem;">AH</div>
+                        <span class="fw-bold text-white">Arthur Howard</span>
+                      </div>
+                    </td>
+                    <td class="fw-semibold text-light">District 1</td>
+                    <td><span class="badge bg-warning text-dark fs-6 px-3 py-1">Civic Leader</span></td>
+                    <td class="fw-bold text-white fs-6">$500.00</td>
+                    <td class="fw-medium text-light">Aug 10, 2026</td>
+                    <td><span class="badge bg-success fs-6 px-3 py-1">Verified</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB 2: VOLUNTEERS ROSTER -->
+      <div class="dashboard-tab-pane d-none" id="tab-volunteers">
+        <section class="mb-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+              <h3 class="h4 fw-bold text-white mb-0">Active Volunteer Canvassing Roster</h3>
+              <button class="btn btn-tertiary-custom btn-sm">+ Add Volunteer</button>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle table-dark table-hover mb-0">
+                <thead>
+                  <tr class="text-warning">
+                    <th>Volunteer Name</th>
+                    <th>Precinct</th>
+                    <th>Role</th>
+                    <th>Hours Logged</th>
+                    <th>Doors Knocked</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold text-white">Sarah Jenkins</td>
+                    <td class="text-light">District 4</td>
+                    <td><span class="badge bg-primary">Precinct Captain</span></td>
+                    <td class="text-white fw-bold">142 hrs</td>
+                    <td class="text-warning fw-bold">3,450</td>
+                    <td><button class="btn btn-outline-light btn-sm">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-white">David Miller</td>
+                    <td class="text-light">District 2</td>
+                    <td><span class="badge bg-success">Canvassing Lead</span></td>
+                    <td class="text-white fw-bold">98 hrs</td>
+                    <td class="text-warning fw-bold">2,120</td>
+                    <td><button class="btn btn-outline-light btn-sm">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-white">Elena Rostova</td>
+                    <td class="text-light">District 1</td>
+                    <td><span class="badge bg-info text-dark">Phone Bank Lead</span></td>
+                    <td class="text-white fw-bold">85 hrs</td>
+                    <td class="text-warning fw-bold">1,840</td>
+                    <td><button class="btn btn-outline-light btn-sm">Manage</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB 3: CONTRIBUTIONS BREAKDOWN -->
+      <div class="dashboard-tab-pane d-none" id="tab-contributions">
+        <section class="mb-4">
+          <div class="custom-card p-4">
+            <h3 class="h4 fw-bold text-white mb-3">Grassroots Fundraising Breakdown</h3>
+            <p class="text-light mb-4">Total raised to date: <strong class="text-warning fs-4">$485,200</strong> across 14,200 micro-donors.</p>
+            <div class="row g-3 text-center mb-4">
+              <div class="col-md-4">
+                <div class="p-3 border border-secondary border-opacity-25 rounded bg-section-var3">
+                  <span class="text-light small d-block">Average Donation</span>
+                  <h4 class="text-warning fw-bold mb-0">$34.15</h4>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 border border-secondary border-opacity-25 rounded bg-section-var3">
+                  <span class="text-light small d-block">Recurring Donors</span>
+                  <h4 class="text-success fw-bold mb-0">3,840 Active</h4>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 border border-secondary border-opacity-25 rounded bg-section-var3">
+                  <span class="text-light small d-block">Corporate PAC %</span>
+                  <h4 class="text-info fw-bold mb-0">0% Strictly Grassroots</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB 4: TEAM MESSAGES -->
+      <div class="dashboard-tab-pane d-none" id="tab-messages">
+        <section class="mb-4">
+          <div class="custom-card p-4">
+            <h3 class="h4 fw-bold text-white mb-3">Campaign Team Dispatch &amp; Messages</h3>
+            <div class="list-group list-group-flush bg-transparent">
+              <div class="list-group-item bg-transparent text-white border-secondary border-opacity-25 py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-1 text-warning fw-bold fs-6">HQ Dispatch: Weekend Door-Canvassing Push</h5>
+                  <span class="small text-light">Today, 09:30 AM</span>
+                </div>
+                <p class="small text-light mb-0">All precinct captains assemble at District 4 office by 8:00 AM on Saturday.</p>
+              </div>
+              <div class="list-group-item bg-transparent text-white border-secondary border-opacity-25 py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-1 text-warning fw-bold fs-6">Press Update: Live Broadcast Tonight</h5>
+                  <span class="small text-light">Yesterday, 04:15 PM</span>
+                </div>
+                <p class="small text-light mb-0">Senator Vance speaking at Metro Convention Hall. Stream links active in dashboard.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB 5: SETTINGS -->
+      <div class="dashboard-tab-pane d-none" id="tab-settings">
+        <section class="mb-4">
+          <div class="custom-card p-4 max-w-700">
+            <h3 class="h4 fw-bold text-white mb-3">Campaign Account Settings</h3>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-white fw-bold">Full Name</label>
+                <input type="text" class="form-control" value="Sarah Jenkins">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-white fw-bold">Assigned Precinct</label>
+                <input type="text" class="form-control" value="District 4 (North Suburbs)" readonly>
+              </div>
+              <div class="col-12">
+                <label class="form-label text-white fw-bold">Notification Email</label>
+                <input type="email" class="form-control" value="sarah.j@civicpulse2026.org">
+              </div>
+              <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-primary-custom">Save Preferences</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

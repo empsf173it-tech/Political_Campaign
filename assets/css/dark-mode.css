@@ -1,0 +1,98 @@
+/* ==========================================================================
+   CivicPulse 2026 - Dark Mode Stylesheet
+   Activated via data-theme="dark" attribute on <html> tag
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --bg-light: #0B0F17;
+  --surface: #1E293B;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border-color: #334155;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-light);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] .h1,
+[data-theme="dark"] h2, [data-theme="dark"] .h2,
+[data-theme="dark"] h3, [data-theme="dark"] .h3,
+[data-theme="dark"] h4, [data-theme="dark"] .h4 {
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .navbar-sticky {
+  background-color: rgba(15, 23, 42, 0.95);
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .nav-link {
+  color: #E2E8F0 !important;
+}
+
+[data-theme="dark"] .nav-link:hover, [data-theme="dark"] .nav-link.active {
+  color: var(--tertiary) !important;
+}
+
+[data-theme="dark"] .header-toggle-btn {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .custom-card {
+  background-color: #1E293B;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .hero-wrapper {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.95) 100%);
+}
+
+[data-theme="dark"] .btn-secondary-custom {
+  color: #F8FAFC;
+  border-color: #F8FAFC;
+}
+
+[data-theme="dark"] .btn-secondary-custom:hover {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+[data-theme="dark"] .form-control, [data-theme="dark"] .form-select {
+  background-color: #0F172A;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .form-control:focus, [data-theme="dark"] .form-select:focus {
+  background-color: #0F172A;
+  border-color: var(--secondary);
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .offcanvas {
+  background-color: #0F172A;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .auth-card {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .table-custom {
+  color: #F8FAFC;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .table-custom th, [data-theme="dark"] .table-custom td {
+  border-color: #334155;
+  background-color: #1E293B;
+  color: #F8FAFC;
+}

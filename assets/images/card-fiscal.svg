@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="fiscBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#fiscBg)"/>
+  <circle cx="200" cy="100" r="75" fill="#F59E0B" opacity="0.15"/>
+  <!-- Balanced Scale & Fiscal Budget Badge -->
+  <path d="M200 45 L200 145 M150 65 L250 65 M130 115 L170 115 L150 65 Z M230 115 L270 115 L250 65 Z" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="150" cy="115" r="15" fill="#F59E0B"/>
+  <circle cx="250" cy="115" r="15" fill="#F59E0B"/>
+  <rect x="175" y="145" width="50" height="12" rx="3" fill="#FFFFFF"/>
+</svg>

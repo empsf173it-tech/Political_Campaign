@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="hcBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#hcBg)"/>
+  <circle cx="200" cy="100" r="75" fill="#EF4444" opacity="0.15"/>
+  <!-- Heart & Pulse Line -->
+  <path d="M200 150 C140 100 130 65 165 55 C185 50 200 65 200 65 C200 65 215 50 235 55 C270 65 260 100 200 150 Z" fill="#2563EB"/>
+  <path d="M140 100 L170 100 L180 80 L195 120 L205 70 L215 105 L225 95 L235 100 L260 100" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

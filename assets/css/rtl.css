@@ -1,0 +1,45 @@
+/* ==========================================================================
+   CivicPulse 2026 - RTL Support Stylesheet
+   Activated via dir="rtl" on <html> tag
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3, [dir="rtl"] .me-4 {
+  margin-left: initial !important;
+}
+
+[dir="rtl"] .ms-1, [dir="rtl"] .ms-2, [dir="rtl"] .ms-3, [dir="rtl"] .ms-4 {
+  margin-right: initial !important;
+}
+
+[dir="rtl"] .nav-link.active::after {
+  right: 0.85rem;
+  left: 0.85rem;
+}
+
+[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 2rem;
+}
+
+[dir="rtl"] .password-toggle-eye {
+  right: auto;
+  left: 1rem;
+}
+
+[dir="rtl"] .auth-header-toggles {
+  right: auto;
+  left: 1.5rem;
+}
+
+[dir="rtl"] .bi-chevron-right::before {
+  content: "\f284"; /* Flip chevron to left in RTL */
+}
+
+[dir="rtl"] .bi-arrow-right::before {
+  content: "\f12F"; /* Flip arrow to left in RTL */
+}

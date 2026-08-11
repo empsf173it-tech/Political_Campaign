@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="respBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#respBg)"/>
+  <circle cx="200" cy="100" r="75" fill="#EF4444" opacity="0.2"/>
+  <!-- Star of Life / First Responder Badge -->
+  <path d="M200 45 L200 155 M145 100 L255 100 M160 65 L240 135 M160 135 L240 65" stroke="#2563EB" stroke-width="18" stroke-linecap="round"/>
+  <path d="M200 45 L200 155 M145 100 L255 100 M160 65 L240 135 M160 135 L240 65" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="200" cy="100" r="18" fill="#F59E0B"/>
+</svg>
