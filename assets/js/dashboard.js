@@ -57,6 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetTab === 'overview') {
           renderMetricsChart();
         }
+
+        // Auto-close sidebar on mobile view when a tab is selected
+        if (window.innerWidth < 992 && dashboardSidebar) {
+          dashboardSidebar.classList.remove('show');
+          const sidebarOverlay = document.getElementById('sidebarOverlay');
+          if (sidebarOverlay) {
+            sidebarOverlay.classList.remove('show');
+          }
+        }
       });
     });
   }
