@@ -11,7 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sidebarToggleBtn && dashboardSidebar) {
     sidebarToggleBtn.addEventListener('click', () => {
       dashboardSidebar.classList.toggle('show');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+      if (sidebarOverlay) {
+        sidebarOverlay.classList.toggle('show');
+      }
     });
+
+    // Close when overlay is clicked
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    if (sidebarOverlay) {
+      sidebarOverlay.addEventListener('click', () => {
+        dashboardSidebar.classList.remove('show');
+        sidebarOverlay.classList.remove('show');
+      });
+    }
   }
 
   // 2. Interactive Single-Page Tab Switching for Dashboard Sidebar Buttons
@@ -59,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Auto-close sidebar on mobile view when a tab is selected
-        if (window.innerWidth < 992 && dashboardSidebar) {
+        if (dashboardSidebar) {
           dashboardSidebar.classList.remove('show');
           const sidebarOverlay = document.getElementById('sidebarOverlay');
           if (sidebarOverlay) {
