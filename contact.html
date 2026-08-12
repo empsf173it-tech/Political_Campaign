@@ -135,8 +135,13 @@
     </section>
 
     <!-- SECTION 3: FLOATING GLASS FORM OVER FULL-BLEED MAP -->
-    <section class="contact-map-bg" id="contactForm">
-      <div class="container position-relative py-5">
+    <section class="contact-map-bg position-relative overflow-hidden" id="contactForm" style="background: none; min-height: 85vh; display: flex; align-items: center;">
+      <!-- Embedded Google Map -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x89c259af18ac4011%3A0x40d588555e5108!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1714498399580!5m2!1sen!2sus" style="border:0; position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 1; filter: grayscale(80%) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Dark Overlay -->
+      <div style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(15, 23, 42, 0.7); z-index: 2;"></div>
+
+      <div class="container position-relative py-5" style="z-index: 10;">
         <div class="row align-items-center justify-content-center">
           <!-- Glassmorphic Form Container -->
           <div class="col-lg-8">
@@ -183,12 +188,12 @@
           <div class="col-lg-4 d-none d-lg-flex flex-column align-items-center justify-content-center gap-4">
             <h3 class="text-white fs-5 fw-bold mb-3 text-center">Connect With Us</h3>
             <div class="d-flex gap-4">
-              <a href="#" class="btn btn-primary rounded-circle p-4 bobbing-element shadow-lg d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;"><i class="bi bi-facebook fs-3"></i></a>
-              <a href="#" class="btn btn-info rounded-circle p-4 bobbing-element bob-delay-1 shadow-lg d-flex align-items-center justify-content-center text-white" style="width: 70px; height: 70px;"><i class="bi bi-twitter-x fs-3"></i></a>
+              <a href="#" class="btn btn-primary rounded-circle p-4 bobbing-element social-bubble-btn shadow-lg d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;"><i class="bi bi-facebook fs-3"></i></a>
+              <a href="#" class="btn btn-info rounded-circle p-4 bobbing-element bob-delay-1 social-bubble-btn shadow-lg d-flex align-items-center justify-content-center text-white" style="width: 70px; height: 70px;"><i class="bi bi-twitter-x fs-3"></i></a>
             </div>
             <div class="d-flex gap-4">
-              <a href="#" class="btn btn-danger rounded-circle p-4 bobbing-element bob-delay-2 shadow-lg d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;"><i class="bi bi-instagram fs-3"></i></a>
-              <a href="#" class="btn btn-success rounded-circle p-4 bobbing-element bob-delay-3 shadow-lg d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;"><i class="bi bi-whatsapp fs-3"></i></a>
+              <a href="#" class="btn btn-danger rounded-circle p-4 bobbing-element bob-delay-2 social-bubble-btn shadow-lg d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;"><i class="bi bi-instagram fs-3"></i></a>
+              <a href="#" class="btn btn-success rounded-circle p-4 bobbing-element bob-delay-3 social-bubble-btn shadow-lg d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;"><i class="bi bi-whatsapp fs-3"></i></a>
             </div>
           </div>
         </div>
