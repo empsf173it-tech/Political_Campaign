@@ -25,6 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebarOverlay.classList.remove('show');
       });
     }
+
+    // Close when ANY button or link in the sidebar is clicked
+    dashboardSidebar.addEventListener('click', (e) => {
+      if (e.target.closest('button') || e.target.closest('a')) {
+        dashboardSidebar.classList.remove('show');
+        if (sidebarOverlay) {
+          sidebarOverlay.classList.remove('show');
+        }
+      }
+    });
   }
 
   // 2. Interactive Single-Page Tab Switching for Dashboard Sidebar Buttons
