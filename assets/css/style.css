@@ -511,6 +511,13 @@ b, strong {
     margin-bottom: 0.75rem !important;
   }
 
+  /* Prevent circular play buttons from stretching into ovals on mobile */
+  a.btn.rounded-circle {
+    width: auto !important;
+    min-height: unset !important;
+    height: auto !important;
+  }
+
   .hero-btn-group, .filter-group {
     flex-direction: column !important;
     gap: 0 !important;
