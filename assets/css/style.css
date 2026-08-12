@@ -1301,3 +1301,33 @@ b, strong {
   box-shadow: 0 15px 30px rgba(0,0,0,0.4) !important;
   z-index: 10;
 }
+
+/* Dashboard Sidebar Mobile Toggle */
+@media (max-width: 991px) {
+  #dashboardSidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 1050;
+    height: 100vh;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+  }
+  #dashboardSidebar.show-sidebar {
+    left: 0;
+  }
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1040;
+    display: none;
+    backdrop-filter: blur(2px);
+  }
+  .sidebar-overlay.show {
+    display: block;
+  }
+}

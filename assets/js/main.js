@@ -231,4 +231,22 @@ document.addEventListener('DOMContentLoaded', () => {
     statNumbers.forEach(num => statsObserver.observe(num));
   }
 
+  // Dashboard Mobile Sidebar Toggle
+  const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+  const dashboardSidebar = document.getElementById('dashboardSidebar');
+  const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+  if(sidebarToggleBtn && dashboardSidebar) {
+    sidebarToggleBtn.addEventListener('click', function() {
+      dashboardSidebar.classList.toggle('show-sidebar');
+      if(sidebarOverlay) sidebarOverlay.classList.toggle('show');
+    });
+  }
+  if(sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', function() {
+      dashboardSidebar.classList.remove('show-sidebar');
+      sidebarOverlay.classList.remove('show');
+    });
+  }
+
 });
