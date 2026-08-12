@@ -9,16 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const dashboardSidebar = document.getElementById('dashboardSidebar');
 
   if (sidebarToggleBtn && dashboardSidebar) {
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
+    
     sidebarToggleBtn.addEventListener('click', () => {
       dashboardSidebar.classList.toggle('show');
-      const sidebarOverlay = document.getElementById('sidebarOverlay');
       if (sidebarOverlay) {
         sidebarOverlay.classList.toggle('show');
       }
     });
 
+    if (sidebarCloseBtn) {
+      sidebarCloseBtn.addEventListener('click', () => {
+        dashboardSidebar.classList.remove('show');
+        if (sidebarOverlay) {
+          sidebarOverlay.classList.remove('show');
+        }
+      });
+    }
+
     // Close when overlay is clicked
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
     if (sidebarOverlay) {
       sidebarOverlay.addEventListener('click', () => {
         dashboardSidebar.classList.remove('show');

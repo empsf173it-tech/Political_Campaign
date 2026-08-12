@@ -1396,7 +1396,7 @@ a.btn.rounded-circle, button.btn.rounded-circle {
     transition: left 0.3s ease-in-out;
     box-shadow: 5px 0 15px rgba(0,0,0,0.5);
   }
-  #dashboardSidebar.show-sidebar {
+  #dashboardSidebar.show {
     left: 0;
   }
   .sidebar-overlay {
