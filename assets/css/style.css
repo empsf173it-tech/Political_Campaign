@@ -491,6 +491,13 @@ b, strong {
 }
 
 /* UNIFORM BUTTON SIZING IN MOBILE VIEW RULE */
+a.btn.rounded-circle, button.btn.rounded-circle {
+  aspect-ratio: 1 / 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 @media (max-width: 768px) {
   .btn-primary-custom,
   .btn-secondary-custom,
@@ -514,8 +521,12 @@ b, strong {
   /* Prevent circular play buttons from stretching into ovals on mobile */
   a.btn.rounded-circle {
     width: auto !important;
-    min-height: unset !important;
     height: auto !important;
+    min-height: unset !important;
+    aspect-ratio: 1 / 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .hero-btn-group, .filter-group {
