@@ -1362,6 +1362,7 @@ a.btn.rounded-circle, button.btn.rounded-circle {
   color: #E2E8F0;
   text-transform: uppercase;
   letter-spacing: 1px;
+  white-space: nowrap !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -1414,15 +1415,15 @@ a.btn.rounded-circle, button.btn.rounded-circle {
   }
 }
 
-/* Fix Stats Cards Overlap on Mobile */
-@media (max-width: 768px) {
-  .stat-label {
-    padding: 1rem 0.5rem !important;
-    font-size: 0.9rem !important;
-    text-align: center;
-    word-break: break-word;
+  /* Fix Stats Cards Overlap on Mobile */
+  @media (max-width: 768px) {
+    .stat-label {
+      padding: 1rem 0.25rem !important;
+      font-size: 0.8rem !important;
+      text-align: center;
+      white-space: nowrap !important;
+    }
   }
-}
 
 /* Fix Newsletter Form Alignment on Mobile */
 @media (max-width: 575px) {
