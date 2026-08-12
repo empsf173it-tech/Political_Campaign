@@ -433,11 +433,11 @@ b, strong {
 }
 
 .hero-home-wrapper {
-  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('../images/hero-home-bg.png');
+  background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('../images/hero-campaign-rally.png');
 }
 
 .hero-home1-wrapper {
-  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('../images/hero-home1-bg.png');
+  background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('../images/hero-home1-bg.png');
 }
 /* OLD CSS BELOW THIS */
 .hero-home-wrapper-old {
