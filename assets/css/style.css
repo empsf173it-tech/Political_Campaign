@@ -508,6 +508,58 @@ a.btn.rounded-circle, button.btn.rounded-circle {
   align-items: center !important;
   justify-content: center !important;
   border-radius: 50% !important;
+  position: relative;
+  background: linear-gradient(135deg, var(--tertiary), #FFC107) !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 1;
+}
+
+.play-button-circle i {
+  color: #ffffff !important;
+  margin-left: 6px;
+}
+
+.play-button-circle:hover {
+  transform: scale(1.1) translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.7) !important;
+}
+
+.play-button-circle::before,
+.play-button-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--tertiary);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.play-button-circle::before {
+  animation: playPulse 2s infinite ease-out;
+}
+
+.play-button-circle::after {
+  animation: playPulse 2s infinite ease-out 1s;
+}
+
+@keyframes playPulse {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
 
 @media (max-width: 768px) {
