@@ -498,6 +498,18 @@ a.btn.rounded-circle, button.btn.rounded-circle {
   justify-content: center !important;
 }
 
+.play-button-circle {
+  width: 80px !important;
+  height: 80px !important;
+  min-width: 80px !important;
+  min-height: 80px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+}
+
 @media (max-width: 768px) {
   .btn-primary-custom,
   .btn-secondary-custom,
