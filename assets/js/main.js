@@ -177,4 +177,58 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ----------------------------------------------------
+  // TIMELINE & COUNTER OBSERVER (SERVICES PAGE)
+  // ----------------------------------------------------
+  
+  // Timeline Items Animation
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  if (timelineItems.length > 0) {
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    timelineItems.forEach(item => timelineObserver.observe(item));
+  }
+
+  // Stats Counter Animation
+  const statNumbers = document.querySelectorAll('.stat-number');
+  if (statNumbers.length > 0) {
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const finalValue = parseInt(target.getAttribute('data-count'), 10) || 0;
+          let startValue = 0;
+          const duration = 2000; // 2 seconds
+          const startTime = performance.now();
+
+          const updateCounter = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Easing out cubic
+            const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+            const currentValue = Math.floor(easeOutProgress * finalValue);
+            
+            target.textContent = currentValue + (target.getAttribute('data-suffix') || '');
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              target.textContent = finalValue + (target.getAttribute('data-suffix') || '');
+            }
+          };
+          requestAnimationFrame(updateCounter);
+          observer.unobserve(target); // Only animate once
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(num => statsObserver.observe(num));
+  }
+
 });
