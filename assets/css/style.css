@@ -1341,3 +1341,14 @@ b, strong {
     word-break: break-word;
   }
 }
+
+/* Fix Newsletter Form Alignment on Mobile */
+@media (max-width: 575px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+.newsletter-form .form-control {
+  min-height: 48px;
+}
