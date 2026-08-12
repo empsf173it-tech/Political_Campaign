@@ -1331,3 +1331,13 @@ b, strong {
     display: block;
   }
 }
+
+/* Fix Stats Cards Overlap on Mobile */
+@media (max-width: 768px) {
+  .stat-label {
+    padding: 1rem 0.5rem !important;
+    font-size: 0.9rem !important;
+    text-align: center;
+    word-break: break-word;
+  }
+}
