@@ -563,12 +563,12 @@ a.btn.rounded-circle, button.btn.rounded-circle {
 }
 
 @media (max-width: 768px) {
-  .btn-primary-custom,
-  .btn-secondary-custom,
-  .btn-tertiary-custom,
-  .auth-card .btn,
-  .filter-group .btn,
-  .hero-btn-group .btn {
+  .btn-primary-custom:not(.play-button-circle),
+  .btn-secondary-custom:not(.play-button-circle),
+  .btn-tertiary-custom:not(.play-button-circle),
+  .auth-card .btn:not(.play-button-circle),
+  .filter-group .btn:not(.play-button-circle),
+  .hero-btn-group .btn:not(.play-button-circle) {
     width: 100% !important;
     min-height: 48px !important;
     height: 48px !important;
